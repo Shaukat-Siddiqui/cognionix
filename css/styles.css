@@ -1244,3 +1244,88 @@ section {
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
+
+/* ========== Mobile Fixes - Prevent Horizontal Scrolling ========== */
+@media (max-width: 768px) {
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+        max-width: 100vw;
+    }
+
+    /* Fix carousel controls on mobile */
+    .carousel-control-prev {
+        left: 5px !important;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .carousel-control-next {
+        right: 5px !important;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Ensure all containers don't overflow */
+    .container, .container-fluid {
+        overflow-x: hidden;
+    }
+
+    /* Fix navbar on mobile */
+    .navbar {
+        overflow: hidden;
+    }
+
+    /* Fix sections padding on mobile */
+    section {
+        overflow-x: hidden;
+    }
+
+    /* Fix hero section */
+    .hero-section {
+        overflow-x: hidden;
+    }
+
+    /* Fix page header */
+    .page-header {
+        overflow-x: hidden;
+    }
+
+    /* Fix footer */
+    .footer {
+        overflow-x: hidden;
+    }
+
+    /* Fix feature-item alignment on mobile */
+    .feature-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .feature-item.justify-content-center {
+        justify-content: center;
+    }
+
+    .feature-content {
+        text-align: center !important;
+    }
+
+    /* Pricing cards mobile alignment */
+    .pricing-card {
+        margin: 0 auto;
+    }
+
+    /* FixiBo pricing section mobile */
+    .row.g-4 .col-md-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
